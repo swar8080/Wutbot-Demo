@@ -1,0 +1,8 @@
+.component-synsetSearchResult {
+
+}
+
+.component-synsetSearchResult .searchResultInstructions {
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+}

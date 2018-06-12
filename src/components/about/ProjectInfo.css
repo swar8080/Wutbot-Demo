@@ -1,0 +1,33 @@
+.project-info__section {
+    margin-top: 1em;
+}
+
+.project-info__section__heading {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.project-info__section p:first-of-type {
+    margin-top: 0;
+}
+
+.project-info__section p:last-of-type {
+    margin-bottom: 0;
+}
+
+.project-info__bot-step-list {
+    margin-top: 0;
+}
+
+.project-info__bot-step-list > li {
+    padding: 0.3em 0 0.3em 0;
+}
+
+.project-info__section__tab-info > li,
+.project-info__section__bot-example-list > li {
+    padding: 0.2em 0 0.2em 0;
+}
+
+.project-info__section__bot-example-list {
+    margin-top: 1em;
+}

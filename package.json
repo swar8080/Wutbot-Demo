@@ -1,0 +1,29 @@
+{
+  "name": "wutbot-demo",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://swar8080.github.io/Wutbot-Webpage",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.4.5",
+    "babel-core": "^6.26.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "gh-pages": "^1.2.0",
+    "storybook-addon-specifications": "^2.1.2"
+  }
+}

@@ -1,0 +1,24 @@
+.subreddit-topic-fetch-result {
+    margin-bottom: 1em;
+}
+
+.subreddit-topic-summary table,th,td {
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+.subreddit-topic-summary__table__headings > th {
+    padding: 0.25em;
+    background-color: lightgray;
+}
+
+.subreddit-topic-summary__table__row > td {
+    text-align: center;
+    padding: 0.25em;
+}
+
+@media only screen and (max-width: 600px) {
+    .subreddit-topic-summary__table {
+        font-size: 0.8em;
+    }
+}

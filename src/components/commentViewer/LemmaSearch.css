@@ -1,0 +1,21 @@
+.lemma-search {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.lemma-search__search-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.lemma-search__lemma-input {
+    flex-grow: 1;
+    max-width: 235px;
+
+    margin-right: 10px;
+}
+
+.lemma-search__instructions {
+    margin: 0.5em 0 0.5em 0;
+    font-weight: bold;
+}

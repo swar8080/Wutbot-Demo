@@ -1,0 +1,29 @@
+.reddit-comment {
+    text-align: center;
+    background-color: bisque;
+    padding: 10px 10px 10px 10px;
+}
+
+.reddit-comment__body-container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 7em;
+    border-bottom: 1px darkgrey solid;
+}
+
+.reddit-comment__body {
+    margin: auto;
+    overflow-y: auto;
+    max-height: 6.9em;
+}
+
+.reddit-comment__source-container {
+    margin-top: 0.5em;
+}
+
+.reddit-comment__original-post-meta {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}

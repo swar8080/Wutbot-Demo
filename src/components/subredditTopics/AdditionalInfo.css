@@ -1,0 +1,11 @@
+.additional-info__section__heading {
+    margin: 0;
+}
+
+.additional-info__section > p {
+    margin: 0.75em 0 0.75em 0;
+}
+
+.additional-info__section__definition__column-name {
+    font-style: italic;
+}

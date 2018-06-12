@@ -1,0 +1,90 @@
+.component-synsetSelector {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.component-synsetSelector .definitionRow {
+    display: flex;
+
+    padding: 0 0.4em 0 0.4em;
+    margin-bottom: 0.33em;
+
+    background-color: bisque;
+    border-radius: 15px;
+    font-size: 1em;
+}
+
+.component-synsetSelector .definitionRow:hover,
+.component-synsetSelector .definitionRow.selected {
+    background-color: #d0baa0;
+    border: 1px whitesmoke solid;
+}
+
+.component-synsetSelector .synsetLabel {
+    font-style: italic;
+}
+
+.commentCount > span {
+    text-align: center;
+    background-color: darkorange;
+
+    border-radius: 1.2em;
+    padding: 0.16em 1em 0.16em 1em;
+    font-size: 0.8em;
+}
+
+@media only screen and (min-width: 600px){
+    .component-synsetSelector .definitionRow {
+        flex-flow: row nowrap;
+    }
+
+    .component-synsetSelector .definitionTextContainer {
+        order: 1;
+        flex-grow: 8;
+        flex-basis: 0;
+    }
+
+    .component-synsetSelector .commentCount {
+        order: 2;
+        flex-grow: 2;
+        flex-basis: 0;
+        align-self: center;
+
+        display: flex;
+        justify-content: flex-end;
+
+        padding: 0.4em 0 0.4em 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .component-synsetSelector .definitionRow {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .definitionTextContainer {
+        order: 1;
+        flex-grow: 1;
+        text-align: center;
+
+        margin-top: 0.2em;
+        margin-bottom: 0.7em;
+    }
+
+    .commentCount {
+        order: 2;
+        margin-bottom: 0.7em;
+    }
+
+    .definitionText {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .commentCount > span {
+        font-size: 1em;
+    }
+}
+

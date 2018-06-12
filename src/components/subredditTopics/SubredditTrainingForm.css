@@ -1,0 +1,18 @@
+.subreddit-training-form {
+    padding: 0 0.5em 1em 0;
+}
+
+.subreddit-training-form__heading {
+    margin: 0.5em 0 0.5em 0;
+    font-size: 1.2em;
+}
+
+.subreddit-training-form__label {
+    display: inline;
+    margin-right: 1em;
+    font-size: 1.2em;
+}
+
+.subreddit-training-form__field-container {
+    margin-bottom: 0.5em;
+}

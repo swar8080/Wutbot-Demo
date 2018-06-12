@@ -1,0 +1,17 @@
+.paged-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.paged-navigation__status {
+    align-self: center;
+    padding: 0 0.4em 0 0.4em;
+    font-size: 1.2em;
+}
+
+.paged-navigation input[type=button] {
+    flex-grow: 1;
+    flex-basis: 0;
+}

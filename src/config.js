@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://35.229.115.85';
+export const BASE_URL = 'https://swar8080.win';

@@ -1,5 +1,6 @@
 import React from 'react';
 import './SynsetSelector.css';
+const classNames = require('classnames');
 
 class SynsetSelector extends React.Component {
 
@@ -21,25 +22,30 @@ class SynsetSelector extends React.Component {
         const onSynsetClicked = this.onSynsetClicked;
 
         const definitionRows = this.props.synsetResultSummary.map(function(res){
-        const synsetKey = res.synset;
-        const rowClass = (selectedSynset === res.synset)? 'definitionRow selected' : 'definitionRow';
+			const synsetKey = res.synset;
+			const rowClass = classNames('synset-selector__synset-row',
+				{'synset-selector__synset-row--selected': selectedSynset === res.synset });
 
             return (
                <div className={rowClass}  key={synsetKey} onClick={(e) => onSynsetClicked(synsetKey, e) }>
-                   <div className={'definitionTextContainer'}>
-                       <p className={'definitionText'}>
-                           <span className={'synsetLabel'}>{res.synset}: </span>
-                           <span className={'gloss'}>{res.gloss} </span>
-                       </p>
+                   <div className={'synset-selector__synset-gloss'}>
+					   <span className={'synset-selector__synset-label'}>{res.synset}: </span>
+					   <span>{res.gloss}</span>
                    </div>
-                   <div className={'commentCount'}>
-                       <span>{res.commentCount} Comments</span>
+                   <div className={'synset-selector__comment-count-container'}>
+                       <span className={'synset-selector__comment-count'}>
+						   {res.commentCount} Comments
+					   </span>
                    </div>
                </div>
             ) ;
         });
 
-        return <div className={'component-synsetSelector'}>{definitionRows}</div>;
+        return (
+            <div className={'synset-selector synset-search-result__synset-selector'}>
+                {definitionRows}
+            </div>
+        );
     }
 
 }

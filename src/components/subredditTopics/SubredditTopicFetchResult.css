@@ -1,24 +1,22 @@
-.subreddit-topic-fetch-result {
-    margin-bottom: 1em;
-}
-
-.subreddit-topic-summary table,th,td {
+.subreddit-topics__table,
+.subreddit-topics__topic-cell,
+.subreddit-topics__heading-cell {
     border: 1px black solid;
     border-collapse: collapse;
 }
 
-.subreddit-topic-summary__table__headings > th {
+.subreddit-topics__heading-cell {
     padding: 0.25em;
     background-color: lightgray;
 }
 
-.subreddit-topic-summary__table__row > td {
+.subreddit-topics__topic-cell {
     text-align: center;
     padding: 0.25em;
 }
 
 @media only screen and (max-width: 600px) {
-    .subreddit-topic-summary__table {
+    .subreddit-topic__table {
         font-size: 0.8em;
     }
 }

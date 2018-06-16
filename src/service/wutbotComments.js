@@ -1,8 +1,8 @@
-import { BASE_URL } from '../config';
+import { SERVER_URL } from '../config';
 import { getAsync } from "./requests";
 
 export function commentCountBySynset(lemma){
-    const requestUrl = `${BASE_URL}/comment_count_by_synset?lemma=${lemma}`;
+    const requestUrl = `${SERVER_URL}/comment_count_by_synset?lemma=${lemma}`;
 
     return new Promise((resolve, reject) => {
        getAsync(requestUrl,
@@ -18,7 +18,7 @@ export function commentCountBySynset(lemma){
 }
 
 export function commentsForSynset(synsetId, lemma){
-    const requestUrl = `${BASE_URL}/comments_by_synset?synset=${synsetId}&lemma=${lemma}`;
+    const requestUrl = `${SERVER_URL}/comments_by_synset?synset=${synsetId}&lemma=${lemma}`;
 
     return new Promise((resolve, reject) => {
        getAsync(requestUrl,

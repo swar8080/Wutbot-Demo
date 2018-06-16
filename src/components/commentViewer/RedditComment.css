@@ -1,7 +1,7 @@
 .reddit-comment {
     text-align: center;
     background-color: bisque;
-    padding: 10px 10px 10px 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .reddit-comment__body-container {

@@ -8,7 +8,7 @@ export default function RedditComment(props){
     return (
         <div className='reddit-comment'>
             <div className='reddit-comment__body-container'>
-                <p className='reddit-comment__body'>{props.body}</p>
+                <div className='reddit-comment__body'>{props.body}</div>
             </div>
             <div className='reddit-comment__source-container'>
                 <span className='reddit-comment__original-post-meta'>

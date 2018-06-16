@@ -2,7 +2,8 @@ import React from 'react';
 import LemmaSearch from './LemmaSearch';
 import SynsetSearchResult from './SynsetSearchResult';
 import PagedCommentFetchResult from "./PagedCommentFetchResult";
-import './WutbotCommentViewer.css'
+import SectionDivider from '../common/SectionDivider';
+import './WutbotCommentViewer.css';
 
 class WutbotCommentViewer extends React.Component {
     constructor(props) {
@@ -84,21 +85,26 @@ class WutbotCommentViewer extends React.Component {
 
     render(){
         return (
-            <div className={'component-wutbotCommentViewer'}>
-                <LemmaSearch
-                    searchNoun={this.state.searchNoun}
-                    onNounChange={this.handleNounChange}
-                    onNounSubmit={this.handleNounSubmit}
-                />
-                {(this.state.submittedSearch)? <div className='section-divider'/> : null}
+            <div className='comment-viewer'>
+                <div className='comment-viewer__lemma-search'>
+                    <LemmaSearch
+                        searchNoun={this.state.searchNoun}
+                        onNounChange={this.handleNounChange}
+                        onNounSubmit={this.handleNounSubmit}
+                    />
+                </div>
+
+                {(this.state.submittedSearch)? <SectionDivider/> : null}
                 <SynsetSearchResult
                     {...this.state.searchProgress}
                     onSynsetSelected={this.handleSynsetSelected}
                 />
-                {(this.state.commentProgress.comments)? <div className='section-divider'/> : null}
-                <PagedCommentFetchResult
-                    {...this.state.commentProgress}
-                />
+                {(this.state.commentProgress.comments)? <SectionDivider/> : null}
+                <div className='comment-viewer__paged-comment-container'>
+                    <PagedCommentFetchResult
+                        {...this.state.commentProgress}
+                    />
+                </div>
             </div>
         );
     }

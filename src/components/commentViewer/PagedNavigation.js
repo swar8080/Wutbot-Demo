@@ -20,7 +20,7 @@ class PagedNavigation extends React.Component {
     };
 
     render() {
-        const pageText = `${this.props.itemIndex + 1}/${this.props.itemCount}`
+        const pageText = `${this.props.itemIndex + 1}/${this.props.itemCount}`;
         const prevDisabled = this.props.itemIndex === 0;
         const nextDisabled = this.props.itemIndex === this.props.itemCount - 1;
 

@@ -1,24 +1,15 @@
-.paged-reddit-comments {
-}
-
 .paged-reddit-comments__heading {
     text-align: center;
     font-weight: bold;
+
+    margin-top: 1em;
     margin-bottom: 0.5em;
 }
 
 .paged-reddit-comments__comment-container {
-    margin: 0 auto;
-    max-width: 500px;
     margin-bottom: 10px;
 }
 
-.paged-reddit-comments__nav-container{
-    margin: 0 auto;
-    max-width: 500px;
-
-    /* Since the navigation buttons are at the bottom of the page,
-      changing to a larger comment can cause them to go out of viewport
-      A large padding at the bottom is added to avoid this*/
-    padding-bottom: 50px;
+.paged-reddit-comments__navigation > .paged-navigation {
+    justify-content: center;
 }

@@ -1,8 +1,8 @@
-.error-message__container {
+.error-message {
     text-align: center;
 }
 
-.error-message__message {
+.error-message__text {
     background-color: #FFD2D2;
     color: #D8000C;
     border: 2px #D8000C solid;

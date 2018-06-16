@@ -1,7 +1,7 @@
-.comment-viewer-app__info__heading {
+.comment-viewer-app__comment-viewer-info {
     margin: 0.5em 0 0.5em 0;
 }
 
-.comment-viewer-app__info__details {
-    margin: 0.5em auto;
+.comment-viewer-info__line {
+    margin: 0.25em 0 0.25em 0;
 }

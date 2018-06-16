@@ -4,7 +4,6 @@ import ErrorMessage from '../common/ErrorMessage';
 import './SubredditTopicFetchResult.css';
 
 export default function SubredditTopicFetchResult(props){
-
     let content = null;
     if (props.loading){
         const loadingMessage = `Analyzing posts from r/${props.subreddit}...`;
@@ -29,7 +28,6 @@ export default function SubredditTopicFetchResult(props){
             {content}
         </div>
     )
-
 }
 
 function SubredditTopicSummary(props){
@@ -39,30 +37,28 @@ function SubredditTopicSummary(props){
         const linIC = (topic.linIC && topic.linIC.toFixed(3)) || 'N/A';
 
         return (
-            <tr className='subreddit-topic-summary__table__row' key={topic.lemma}>
-                <td>{topic.lemma}</td>
-                <td>{synset}</td>
-                <td>{gloss}</td>
-                <td>{linIC}</td>
+            <tr className='subreddit-topics__table-topic-row' key={topic.lemma}>
+                <td className='subreddit-topics__topic-cell'>{topic.lemma}</td>
+                <td className='subreddit-topics__topic-cell'>{synset}</td>
+                <td className='subreddit-topics__topic-cell'>{gloss}</td>
+                <td className='subreddit-topics__topic-cell'>{linIC}</td>
             </tr>
         );
     });
 
    return (
-       <div className='subreddit-topic-summary'>
-          <table className='subreddit-topic-summary__table'>
+       <div className='subreddit-topics'>
+          <table className='subreddit-topics__table'>
               <tbody>
-                  <tr className='subreddit-topic-summary__table__headings'>
-                       <th>Topic</th>
-                       <th>Synset</th>
-                       <th>Synset Meaning</th>
-                       <th>Synset Similarity Score</th>
+                  <tr className='subreddit-topics__table-headings'>
+                       <th className='subreddit-topics__heading-cell'>Topic</th>
+                       <th className='subreddit-topics__heading-cell'>Synset</th>
+                       <th className='subreddit-topics__heading-cell'>Synset Meaning</th>
+                       <th className='subreddit-topics__heading-cell'>Synset Similarity Score</th>
                    </tr>
                    {rows}
               </tbody>
           </table>
        </div>
-
    );
-
 }

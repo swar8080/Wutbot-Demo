@@ -2,6 +2,8 @@ import React from 'react';
 import SubredditTrainingForm from './SubredditTrainingForm';
 import SubredditTopicFetchResult from './SubredditTopicFetchResult';
 import AdditionalInfo from './AdditionalInfo';
+import SectionDivider from '../common/SectionDivider';
+import './SubredditTopicsViewer.css';
 
 class SubredditTopicsViewer extends React.Component {
     constructor(props) {
@@ -16,18 +18,23 @@ class SubredditTopicsViewer extends React.Component {
 
     render() {
         return (
-            <div>
-                <SubredditTrainingForm
-                    subreddit={this.state.subreddit}
-                    postType={this.state.postType}
-                    onSubredditChange={(subreddit) => this.setState({subreddit})}
-                    onPostTypeChange={(postType) => this.setState({postType})}
-                    onSubmit={this.handleSubredditTrainingFormSubmit}
-                />
-                <SubredditTopicFetchResult
-                    {...this.state.topicProgress}
-                />
-                <div className='section-divider'/>
+            <div className='subreddit-topic-viewer'>
+                <div className='subreddit-topic-viewer__training-form'>
+                    <SubredditTrainingForm
+                        subreddit={this.state.subreddit}
+                        postType={this.state.postType}
+                        onSubredditChange={(subreddit) => this.setState({subreddit})}
+                        onPostTypeChange={(postType) => this.setState({postType})}
+                        onSubmit={this.handleSubredditTrainingFormSubmit}
+                    />
+                </div>
+
+				<div className='subreddit-topic-viewer__fetch-result'>
+					<SubredditTopicFetchResult
+                    	{...this.state.topicProgress}
+                	/>
+				</div>
+                <SectionDivider/>
                 <AdditionalInfo/>
             </div>
         );
@@ -70,7 +77,6 @@ class SubredditTopicsViewer extends React.Component {
                 }
             );
     };
-
 }
 
 export default SubredditTopicsViewer;

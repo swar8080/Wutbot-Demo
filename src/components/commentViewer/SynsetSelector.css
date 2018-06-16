@@ -1,9 +1,4 @@
-.component-synsetSelector {
-    max-height: 50vh;
-    overflow-y: auto;
-}
-
-.component-synsetSelector .definitionRow {
+.synset-selector__synset-row {
     display: flex;
 
     padding: 0 0.4em 0 0.4em;
@@ -11,40 +6,41 @@
 
     background-color: bisque;
     border-radius: 15px;
-    font-size: 1em;
 }
 
-.component-synsetSelector .definitionRow:hover,
-.component-synsetSelector .definitionRow.selected {
+.synset-selector__synset-row:hover,
+.synset-selector__synset-row--selected {
     background-color: #d0baa0;
     border: 1px whitesmoke solid;
 }
 
-.component-synsetSelector .synsetLabel {
+.synset-selector__synset-label {
     font-style: italic;
 }
 
-.commentCount > span {
+.synset-selector__comment-count {
     text-align: center;
     background-color: darkorange;
 
     border-radius: 1.2em;
     padding: 0.16em 1em 0.16em 1em;
-    font-size: 0.8em;
 }
 
 @media only screen and (min-width: 600px){
-    .component-synsetSelector .definitionRow {
+    .synset-selector__synset-row {
         flex-flow: row nowrap;
     }
 
-    .component-synsetSelector .definitionTextContainer {
+    .synset-selector__synset-gloss {
         order: 1;
         flex-grow: 8;
         flex-basis: 0;
+
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
     }
 
-    .component-synsetSelector .commentCount {
+    .synset-selector__comment-count-container {
         order: 2;
         flex-grow: 2;
         flex-basis: 0;
@@ -52,19 +48,22 @@
 
         display: flex;
         justify-content: flex-end;
+        margin-left: 0.25em;
+    }
 
-        padding: 0.4em 0 0.4em 0;
+    .synset-selector__comment-count {
+        font-size: 0.8em;
     }
 }
 
 @media only screen and (max-width: 600px){
-    .component-synsetSelector .definitionRow {
+    .synset-selector__synset-row {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
     }
 
-    .definitionTextContainer {
+    .synset-selector__synset-gloss {
         order: 1;
         flex-grow: 1;
         text-align: center;
@@ -73,18 +72,9 @@
         margin-bottom: 0.7em;
     }
 
-    .commentCount {
+    .synset-selector__comment-count-container {
         order: 2;
         margin-bottom: 0.7em;
-    }
-
-    .definitionText {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .commentCount > span {
-        font-size: 1em;
     }
 }
 

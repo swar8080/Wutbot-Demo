@@ -2,7 +2,7 @@ export default function formatSubredditTopicsResults(response){
 
     if (response.topics){
         response.topics = response.topics
-            .filter((t1) => t1.pos === 'n')
+            .filter((t1) => t1.pos !== 'v')
             .sort((t1, t2) => {
                 //sort by similarity score in descending order
                 // and tiebreak by topic lemma in alphabetical order

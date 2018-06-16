@@ -2,7 +2,7 @@
     margin-top: 1em;
 }
 
-.project-info__section__heading {
+.project-info__heading {
     margin-top: 0;
     margin-bottom: 0.5em;
 }
@@ -23,11 +23,11 @@
     padding: 0.3em 0 0.3em 0;
 }
 
-.project-info__section__tab-info > li,
-.project-info__section__bot-example-list > li {
+.project-info__tab-info > li,
+.project-info__bot-example-list > li {
     padding: 0.2em 0 0.2em 0;
 }
 
-.project-info__section__bot-example-list {
+.project-info__bot-example-list {
     margin-top: 1em;
 }

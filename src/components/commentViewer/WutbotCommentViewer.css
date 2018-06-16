@@ -1,0 +1,16 @@
+.comment-viewer__lemma-search {
+    margin-bottom: 0.75em;
+}
+
+.comment-viewer__paged-comment-container {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*
+    This adds a buffer when changing from a small comment to a large one,
+    otherwise the navigation buttons at the bottom of the page might go out
+    of the viewport.
+    */
+    margin-bottom: 50px;
+}

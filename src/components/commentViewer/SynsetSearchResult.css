@@ -1,8 +1,9 @@
-.component-synsetSearchResult {
-
-}
-
-.component-synsetSearchResult .searchResultInstructions {
+.synset-search-result__instructions {
     font-weight: bold;
     margin: 0 0 0.5em 0;
+}
+
+.synset-search-result__synset-selector {
+    max-height: 50vh;
+    overflow-y: auto;
 }

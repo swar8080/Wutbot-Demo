@@ -43,13 +43,14 @@ class PagedCommentFetchResult extends React.Component{
                 <div className={'paged-reddit-comments__comment-container'}>
                     <RedditComment {...comment}/>
                 </div>
-                <div className={'paged-reddit-comments__nav-container'}>
+                <div className={'paged-reddit-comments__navigation'}>
                     <PagedNavigation
                         itemIndex={this.state.commentIndex}
                         itemCount={this.props.comments.length}
                         onPageChange={(i) => this.onDisplayComment(i)}
                     />
                 </div>
+
             </div>
         );
     }

@@ -30,7 +30,7 @@ export default class SynsetSearchResult extends React.Component {
        else {
            content = (
                <div>
-                   <p className={'searchResultInstructions'}>Select the definition of "{this.props.lemma}" to see Reddit comments for:</p>
+                   <p className={'synset-search-result__instructions'}>Select the definition of "{this.props.lemma}" to see Reddit comments for:</p>
                    <SynsetSelector
                         synsetResultSummary={this.props.result.rows}
                         onSynsetSelected={this.props.onSynsetSelected}
@@ -40,7 +40,7 @@ export default class SynsetSearchResult extends React.Component {
        }
 
        return (
-            <div className={'component-synsetSearchResult'}>
+            <div className={'synset-search-result'}>
                 {content}
             </div>
         );

@@ -1,4 +1,4 @@
-import { BASE_URL } from '../config';
+import { SERVER_URL } from '../config';
 
 export function getAsync(url, success, error){
     const xhr = new XMLHttpRequest();

@@ -23,15 +23,15 @@ class LemmaSearch extends React.Component {
                     </a>
                     <span>:</span>
                 </p>
-                <div className={"lemma-search__search-container"}>
+                <div className={"lemma-search__form"}>
                     <EnterKeyListener onEnterKey={this.props.onNounSubmit}>
-                        <input type='text' placeholder='Noun (Singular)' className='lemma-search__lemma-input'
+                        <input type='text' className='lemma-search__textbox' placeholder='Noun (Singular)'
                            value={this.props.searchNoun}
                            onChange={this.props.onNounChange}
                         />
                     </EnterKeyListener>
 
-                    <input type='button' value='Search' className='lemma-search__submit-button'
+                    <input type='button' value='Search'
                            onClick={this.props.onNounSubmit}
                            disabled={isSearchDisabled}
                     />

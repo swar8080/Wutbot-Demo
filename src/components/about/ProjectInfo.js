@@ -25,7 +25,7 @@ export default function ProjectInfo(props){
 
                 <p>
                     <span>Lastly, I created this webpage to experiment with ReactJS. The front-end source code is available on </span>
-                    <a href='https://github.com/swar8080/Wutbot-Webpage' target='_blank'>github</a>
+                    <a href='https://github.com/swar8080/Wutbot-Demo' target='_blank'>github</a>
                     <span> – feedback is appreciated!</span>
                 </p>
             </div>

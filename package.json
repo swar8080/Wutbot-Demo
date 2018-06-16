@@ -2,7 +2,7 @@
   "name": "wutbot-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://swar8080.github.io/Wutbot-Webpage",
+  "homepage": "http://swar8080.github.io/Wutbot-Demo",
   "dependencies": {
     "bootstrap": "^4.1.1",
     "react": "^16.4.0",

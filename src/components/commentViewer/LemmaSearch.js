@@ -6,6 +6,7 @@ class LemmaSearch extends React.Component {
 
     constructor(props){
         super(props);
+        this.lemmaInputRef = React.createRef();
     }
 
     render(){
@@ -26,6 +27,7 @@ class LemmaSearch extends React.Component {
                 <div className={"lemma-search__form"}>
                     <EnterKeyListener onEnterKey={this.props.onNounSubmit}>
                         <input type='text' className='lemma-search__textbox' placeholder='Noun (Singular)'
+                           ref={this.lemmaInputRef}
                            value={this.props.searchNoun}
                            onChange={this.props.onNounChange}
                         />
@@ -39,6 +41,10 @@ class LemmaSearch extends React.Component {
             </div>
         );
     }
+
+    componentDidMount(){
+    	this.lemmaInputRef.current.focus();
+	}
 }
 
 export default LemmaSearch;

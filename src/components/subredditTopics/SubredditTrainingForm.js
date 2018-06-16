@@ -5,6 +5,7 @@ import './SubredditTrainingForm.css';
 class SubredditTrainingForm extends React.Component {
     constructor(props) {
         super(props);
+        this.subredditInputRef = React.createRef();
     }
 
     render() {
@@ -18,6 +19,7 @@ class SubredditTrainingForm extends React.Component {
                             type='text'
                             value={this.props.subreddit}
                             onChange={(e) => this.props.onSubredditChange(e.target.value)}
+                            ref={this.subredditInputRef}
                         />
                     </EnterKeyListener>
                 </div>
@@ -38,6 +40,10 @@ class SubredditTrainingForm extends React.Component {
                 />
             </div>
         )
+    }
+
+    componentDidMount(){
+        this.subredditInputRef.current.focus();
     }
 }
 
